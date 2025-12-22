@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDERWATER-X</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="header-container">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="#"><img src="logoUX.png" alt="UNDERWATER-X"></a>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#">Société</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Applications</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <!-- HAMBURGER -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+
+    <div class="hero-text">
+        <h1>UNDERWATER-X</h1>
+        <h2>Technology at Sea</h2>
+    </div>
+    <div class="hero-image-wrapper">
+    <img src="image_accueil.png" alt="Illustration sous-marine"> 
+    </div>
+</section>
+
+<!-- ================= SOCIETE ================= -->
+<section class="societe">
+
+    <div class="societe-content">
+        <h1 class="titre-section">La société</h1>
+        <h2 class="titre-section">L'équipe dirigeante</h2>
+    </div>
+
+        <p class="paragraphe-centre">
+            <text-align : left;>Pierre Violante, Jean-Philippe Brunet et Fabrice Brassart associent leurs expertises
+            pour couvrir l’ensemble du spectre du projet : <br> vision stratégique, maîtrise technologique
+            et pilotage opérationnel.</text-align>
+        </p>
+
+        <img src="equipe_underwateur2.png" alt="Équipe dirigeante" class="détachée">
+        
+        <p class="paragraphe-centre">
+            <text-align : left;>UNDERWATER-X conçoit et développe des véhicules maritimes autonomes destinés à l'exploration,
+            la surveillance et la collecte de données sous-marines. Fondée par des passionnés
+            d'océanographie et d'ingénierie navale, la société allie innovation technologique et
+            expertise du milieu marin.</text-align>
+        </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services">
+
+    <div class="services-content">
+        <h1 class="titre-section">Nos services</h1>
+        <h2 class="titre-section">L'équipe dirigeante</h2>
+    </div>
+
+        <p class="paragraphe-centre">
+            <text-align : left;>Pierre Violante, Jean-Philippe Brunet et Fabrice Brassart associent leurs expertises
+            pour couvrir l’ensemble du spectre du projet : <br> vision stratégique, maîtrise technologique
+            et pilotage opérationnel.</text-align>
+        </p>
+
+        <img src="equipe_underwateur2.png" alt="Équipe dirigeante" class="détachée">
+        
+        <p class="paragraphe-centre">
+            <text-align : left;>UNDERWATER-X conçoit et développe des véhicules maritimes autonomes destinés à l'exploration,
+            la surveillance et la collecte de données sous-marines. Fondée par des passionnés
+            d'océanographie et d'ingénierie navale, la société allie innovation technologique et
+            expertise du milieu marin.</text-align>
+        </div>
+</section>
+
+<!-- ================= JS HAMBURGER ================= -->
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

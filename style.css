@@ -1,0 +1,273 @@
+/* ================= ROOT / VARIABLES ================= */
+:root {
+    --primary-color: #F7DA93;
+    --secondary-color: #FFFFFF;
+    --bg-dark: #001739; /* couleur uniforme header + sections */
+}
+
+/* ================= RESET / BASE ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-dark);
+    color: var(--secondary-color);
+    overflow-x: hidden; /* empêche le scroll horizontal */
+}
+
+section {
+    background-color: var(--bg-dark);
+    max-width: 100%; /* ne dépasse jamais la largeur de la fenêtre */
+}
+
+/* ================= IMAGES RESPONSIVE ================= */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* ================= HEADER ================= */
+
+.header {
+    position: fixed; /* indispensable pour que l’ombre reste visible */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* pour rester au-dessus du hero */
+    background-color: var(--bg-dark);
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* ombre portée */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    height: 60px;
+    display: block;
+}
+
+/* Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ===== Effet élégant navigation ===== */
+
+.nav-links li a {
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* État actif */
+.nav-links li a.active {
+    color: var(--primary-color);
+}
+
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    margin-left: 15px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    background-color: var(--bg-dark);
+    text-align: center;
+    padding-top: calc(100px);
+    padding-bottom: 50px; /* espace sous l'image */
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #0f89cb;
+}
+
+.hero h2 {
+    font-size: 2.7rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.hero-image-wrapper img {
+    display: block;
+    margin: 0 auto;  /* centre l'image horizontalement */
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= SOCIETE ================= */
+
+.societe-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1.titre-section {
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+h2.titre-section {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Paragraphes centrés mais texte aligné à gauche */
+.paragraphe-centre {
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: left;
+    color: #fff;
+}
+
+/* Images détachées */
+.détachée {
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= SERVICES ================= */
+
+.services-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1.titre-section {
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+h2.titre-section {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Paragraphes centrés mais texte aligné à gauche */
+.paragraphe-centre {
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: left;
+    color: #fff;
+}
+
+/* Images détachées */
+.détachée {
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    /* Header : logo à gauche, hamburger à droite */
+    .header-container {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        flex-direction: column;
+        background-color: var(--bg-dark);
+        padding: 20px;
+        border-radius: 8px;
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+ /* ================= Paragraphes responsive ================= */
+    .paragraphe-centre {
+        max-width: 90%;      /* laisse de l'espace sur les côtés */
+        padding: 0 15px;     /* padding horizontal si nécessaire */
+        font-size: 0.95rem;  /* taille de police plus confortable */
+    }
+}
