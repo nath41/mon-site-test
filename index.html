@@ -10,6 +10,8 @@
 
 <body>
 
+    <p style="color:red; font-size:20px;">Test : je vois ce texte</p>
+
 <!-- HEADER -->
 <header class="header">
     <div class="header-container">
@@ -224,5 +226,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<script>
+document.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPos = window.scrollY + 100; // +100 pour compenser le header fixed
+
+    sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+
+        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+        if (link) {
+            if (scrollPos >= top && scrollPos < top + height) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        }
+    });
+});
+</script>
 </body>
 </html>
