@@ -602,6 +602,83 @@ h1.titre-section {
 .slogan a:hover {
     text-decoration: underline; /* optionnel : soulignement au survol */
 
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: #001739; /* même couleur que le header et sections */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 2px solid #16b7c5; /* petit trait lumineux en haut du footer */
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    height: 50px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #16b7c5; /* même bleu que ton contour */
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-contact a {
+    color: #16b7c5;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* ================= FOOTER RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .footer-container {
+        gap: 15px;
+    }
+
+    .footer-links {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+
+    .footer-logo img {
+        height: 40px;
+    }
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
