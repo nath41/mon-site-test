@@ -605,34 +605,33 @@ h1.titre-section {
 
 /* ================= FOOTER ================= */
 .footer {
-    background-color: #0a1d4d; /* plus clair que le header */
+    background-color: #0a1d4d; /* fond plus clair que header */
     color: #fff;
     padding: 50px 20px;
-    text-align: center;
     border-top: 2px solid #16b7c5;
 }
 
 .footer-container {
-    max-width: 1100px;
+    max-width: 1100px;       /* centrage sur la largeur */
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* colonnes espacées horizontalement */
+    justify-content: space-between; /* colonnes espacées */
     align-items: flex-start;
-    flex-wrap: wrap; /* pour responsive */
+    flex-wrap: wrap;         /* permet de descendre sur mobile */
     gap: 30px;
 }
 
-/* Colonnes */
+/* Colonnes du footer */
 .footer-column {
-    flex: 1 1 200px; /* min 200px, flexible */
+    flex: 1 1 250px;          /* largeur flexible mais min 250px */
     display: flex;
     flex-direction: column;
-    align-items: center; /* centre contenu dans chaque colonne */
+    align-items: center;      /* centre le contenu horizontalement */
 }
 
 /* Logo */
 .footer-logo img {
-    height: 60px; /* taille raisonnable */
+    height: 60px;             /* taille raisonnable */
     margin-bottom: 15px;
 }
 
@@ -648,10 +647,10 @@ h1.titre-section {
 }
 
 .footer-links ul li a {
-    color: #fff; /* même couleur que le texte */
+    color: #fff;             /* uniforme avec le texte */
     text-decoration: none;
     font-weight: 500;
-    transition: none; /* pas de hover coloré */
+    transition: none;        /* pas de hover coloré */
 }
 
 /* Contact */
@@ -661,7 +660,7 @@ h1.titre-section {
 }
 
 .footer-contact a {
-    color: #fff; /* même couleur que le texte */
+    color: #fff;
     text-decoration: none;
 }
 
@@ -670,6 +669,7 @@ h1.titre-section {
     font-size: 0.85rem;
     opacity: 0.7;
     margin-top: 30px;
+    text-align: center;
 }
 
 /* Responsive */
