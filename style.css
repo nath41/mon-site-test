@@ -434,16 +434,6 @@ h1.titre-section {
      list-style-type: disc;
 }
 
-section::after {
-    content: "";
-    display: block;
-    width: 60px;            /* longueur du trait */
-    height: 4px;            /* épaisseur */
-    background: var(--primary-color);
-    margin: 40px auto 0;    /* espace au-dessus et centré */
-    border-radius: 2px;     /* arrondi subtil */
-}
-
 .h2-reflet-cristal-ultime {
      font-weight: 700;
      letter-spacing: 0.08em;
@@ -461,17 +451,6 @@ section::after {
      margin: 0;
      text-align: left;
      color: #fff;
-}
-
-section::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 6px;
-    background: #0f89cb; /* bleu du H1 */
-    margin: 50px auto 0;
-    border-radius: 3px;
-    box-shadow: 0 0 12px #0f89cb; /* halo léger */
 }
 
 /* GALERIE MOSAÏQUE */
@@ -550,6 +529,17 @@ section::after {
         flex: 1 1 100%;
         max-width: 100%;
     }
+}
+
+section::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 6px;
+    background: #0f89cb; /* bleu du H1 */
+    margin: 50px auto 0;
+    border-radius: 3px;
+    box-shadow: 0 0 12px #0f89cb; /* halo léger */
 }
 
 /* ================= CONTACT ================= */
