@@ -204,11 +204,15 @@ img {
 
 /* Fin du Hero */
 
-.separator {
-    width: 100%;
-    height: 4px; /* épaisseur du trait */
-    background: linear-gradient(90deg, #0feafe, #33cfff); /* dégradé lumineux */
-    margin: 0; /* pas d'espace supplémentaire */
+.hero::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 6px;
+    background: #0f89cb; /* bleu du H1 */
+    margin: 50px auto 0;
+    border-radius: 3px;
+    box-shadow: 0 0 12px #0f89cb; /* halo léger */
 }
 
 /* ================= SOCIETE ================= */
