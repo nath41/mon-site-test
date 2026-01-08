@@ -603,37 +603,38 @@ h1.titre-section {
     text-decoration: underline; /* optionnel : soulignement au survol */
 
 
+/* ================= FOOTER ================= */
 .footer {
-    background-color: #0f1c3c; /* légèrement plus clair que le header */
+    background-color: #0f1c3c; /* fond plus clair que header */
     color: #fff;
     padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: center; /* centre les colonnes horizontalement */
+    gap: 50px; /* espace entre colonnes */
+    width: 100%;
+    max-width: 1100px;
 }
 
-/* Colonnes */
 .footer-column {
-    flex: 1 1 200px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* centre contenu dans chaque colonne */
+    align-items: center; /* centre contenu colonne */
+    flex: 0 1 200px; /* min 200px, flexible */
 }
 
-/* Logo : légèrement plus grand que dans le header */
 .footer-logo img {
-    height: 70px; /* header = 60px donc ici un peu plus grand */
-    margin-bottom: 15px;
+    height: 65px; /* un peu plus grand que header */
+    margin-bottom: 20px;
 }
 
-/* Liens */
 .footer-links ul {
     list-style: none;
     padding: 0;
@@ -646,7 +647,7 @@ h1.titre-section {
 }
 
 .footer-links ul li a {
-    color: #fff; /* même couleur que le texte */
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
 }
@@ -655,11 +656,9 @@ h1.titre-section {
     text-decoration: underline;
 }
 
-/* Contact */
 .footer-contact p {
     margin: 5px 0;
     font-size: 0.95rem;
-    text-align: center;
 }
 
 .footer-contact a {
@@ -667,12 +666,10 @@ h1.titre-section {
     text-decoration: none;
 }
 
-/* Copyright */
 .footer-copy {
-    text-align: center;
+    margin-top: 30px;
     font-size: 0.85rem;
     opacity: 0.7;
-    margin-top: 30px;
 }
 
 /* Responsive */
@@ -680,11 +677,11 @@ h1.titre-section {
     .footer-container {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 30px;
     }
 
     .footer-logo img {
-        height: 60px; /* adapte pour mobile */
+        height: 55px;
     }
 }
 
