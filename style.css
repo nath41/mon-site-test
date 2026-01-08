@@ -605,34 +605,34 @@ h1.titre-section {
 
 /* ================= FOOTER ================= */
 .footer {
-    background-color: #001739; /* même couleur que le header et sections */
+    background-color: #001739; /* même couleur que le header */
     color: #fff;
-    padding: 40px 0;
+    padding: 50px 20px;
     text-align: center;
-    border-top: 2px solid #16b7c5; /* petit trait lumineux en haut du footer */
+    border-top: 2px solid #16b7c5; /* trait lumineux en haut */
 }
 
 .footer-container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 }
 
+/* Logo */
 .footer-logo img {
-    height: 50px;
+    height: 60px; /* taille raisonnable */
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
+/* Liens */
 .footer-links {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
     padding: 0;
     margin: 0;
@@ -646,12 +646,13 @@ h1.titre-section {
 }
 
 .footer-links li a:hover {
-    color: #16b7c5; /* même bleu que ton contour */
+    color: #16b7c5; /* bleu lumineux */
 }
 
+/* Contact */
 .footer-contact p {
     margin: 5px 0;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .footer-contact a {
@@ -663,19 +664,26 @@ h1.titre-section {
     text-decoration: underline;
 }
 
-/* ================= FOOTER RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .footer-container {
-        gap: 15px;
-    }
+/* Copyright */
+.footer-copy {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 15px;
+}
 
+/* ================= RESPONSIVE FOOTER ================= */
+@media (max-width: 768px) {
     .footer-links {
+        flex-direction: column;
         gap: 10px;
-        font-size: 0.9rem;
     }
 
     .footer-logo img {
-        height: 40px;
+        height: 50px;
+    }
+
+    .footer-contact p {
+        font-size: 0.9rem;
     }
 }
 
