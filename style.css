@@ -666,6 +666,16 @@ h1.titre-section {
     text-decoration: none;
 }
 
+.footer-contact a,
+.footer-contact p {
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.footer-column.footer-contact {
+    flex: 0 0 280px; /* largeur fixe confortable */
+}
+
 .footer-copy {
     margin-top: 30px;
     font-size: 0.85rem;
