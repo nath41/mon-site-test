@@ -354,6 +354,8 @@ h1.titre-section {
 
 .applications {
     padding-top: 120px;
+
+    scroll-margin-top: 100px;
 }
 
 .applications-content {
