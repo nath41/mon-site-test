@@ -459,12 +459,13 @@ h1.titre-section {
     text-decoration: underline; /* optionnel : soulignement au survol */
 
 /* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
 
+    /* Hamburger visible */
     .hamburger {
         display: flex;
     }
-}
 
     /* Header : logo à gauche, hamburger à droite */
     .header-container {
@@ -472,21 +473,22 @@ h1.titre-section {
         align-items: center;
     }
 
+    /* Menu mobile */
     .nav-links {
         display: none;
         position: fixed;
-        top: 70px;
-        right: 0px;
-        width: 70vw;
-        max-width: 250px;
-        height: 100vh;
+        top: 80px; /* sous le header */
+        right: 0;
+        width: 75vw;
+        max-width: 260px;
+        height: calc(100vh - 80px);
         flex-direction: column;
         background-color: var(--bg-dark);
         padding: 20px;
-        border-radius: 8px;
         gap: 15px;
-        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-        z-index: 999;
+        box-shadow: -4px 0 12px rgba(0,0,0,0.35);
+        overflow-y: auto;
+        z-index: 9999;
     }
 
     .nav-links.active {
@@ -495,8 +497,16 @@ h1.titre-section {
 
     .nav-links li a {
         font-size: 1.2rem;
+        white-space: nowrap; /* empêche CONTACT d'être coupé */
     }
 
+    /* Paragraphes responsive */
+    .paragraphe-centre {
+        max-width: 90%;
+        padding: 0 15px;
+        font-size: 0.95rem;
+    }
+}
  /* ================= Paragraphes responsive ================= */
     .paragraphe-centre {
         max-width: 90%;      /* laisse de l'espace sur les côtés */
