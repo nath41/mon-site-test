@@ -24,6 +24,8 @@ body {
     background-color: var(--bg-dark);
     color: var(--secondary-color);
     overflow-x: hidden; /* empêche le scroll horizontal */
+
+    padding-top: 100px; /* compensation du header fixed */
 }
 
 section {
@@ -33,6 +35,10 @@ section {
 
 section:not(.hero) {
     padding: 60px 0;
+}
+
+section {
+    scroll-margin-top: 120px; /* header + marge de confort */
 }
 
 /* ================= IMAGES RESPONSIVE ================= */
