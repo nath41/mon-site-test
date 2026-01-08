@@ -474,6 +474,68 @@ section::after {
     box-shadow: 0 0 12px #0f89cb; /* halo léger */
 }
 
+/* ================= GALERIE APPLICATIONS - VERSION LUMINEUSE ================= */
+.applications-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    text-align: center;
+    border-radius: 12px;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Halo lumineux derrière l'image */
+.image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 244, 204, 0.4), transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1; /* au-dessus du halo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol */
+.image-wrapper:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(255, 244, 204, 0.4);
+}
+
+.image-wrapper:hover::before {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Légende */
+.gallery-caption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
 /* ================= CONTACT ================= */
 
 .contact-content {
