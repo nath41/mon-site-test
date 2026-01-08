@@ -202,6 +202,18 @@ img {
     height: auto;
 }
 
+/* Fin du Hero */
+.hero::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 6px;
+    background: #0f89cb; /* bleu du H1 */
+    margin: 50px auto 0;
+    border-radius: 3px;
+    box-shadow: 0 0 12px #0f89cb; /* halo léger */
+}
+
 /* ================= SOCIETE ================= */
 
 .societe-content {
@@ -409,6 +421,24 @@ h1.titre-section {
 .paragraphe-exergue:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3), /* ombre renforcée */ 0 0 16px rgba(255, 244, 204, 0.33); /* halo lumineux renforcé au hover */
+}
+
+.liste-gauche {
+     margin-top: 1.2rem; /* espace si tu veux l’ajouter */
+     padding-left: 1.2rem; /* retrait des puces */
+     text-align: left;
+     color: #fff;
+     list-style-type: disc;
+}
+
+section::after {
+    content: "";
+    display: block;
+    width: 60px;            /* longueur du trait */
+    height: 4px;            /* épaisseur */
+    background: var(--primary-color);
+    margin: 40px auto 0;    /* espace au-dessus et centré */
+    border-radius: 2px;     /* arrondi subtil */
 }
 
 .h2-reflet-cristal-ultime {
