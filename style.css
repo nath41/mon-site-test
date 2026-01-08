@@ -474,17 +474,28 @@ section::after {
     box-shadow: 0 0 12px #0f89cb; /* halo léger */
 }
 
-/* ================= GALERIE APPLICATIONS - VERSION LUMINEUSE ================= */
-.applications-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+/* GALERIE MOSAÏQUE */
+.mosaic-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     margin-top: 40px;
 }
 
-.gallery-item {
+.mosaic-gallery .gallery-item {
     text-align: center;
     border-radius: 12px;
+}
+
+.mosaic-gallery .gallery-item.large {
+    flex: 1 1 45%;   /* deux grandes images côte à côte */
+    max-width: 45%;
+}
+
+.mosaic-gallery .gallery-item.small {
+    flex: 1 1 25%;   /* petite image plus étroite */
+    max-width: 25%;
 }
 
 .image-wrapper {
@@ -494,15 +505,14 @@ section::after {
     transition: transform 0.3s ease;
 }
 
-/* Halo lumineux derrière l'image */
 .image-wrapper::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 120%;
-    height: 120%;
-    background: radial-gradient(circle, rgba(255, 244, 204, 0.4), transparent 70%);
+    width: 130%;
+    height: 130%;
+    background: radial-gradient(circle, rgba(255, 244, 204, 0.35), transparent 70%);
     transform: translate(-50%, -50%);
     z-index: 0;
     border-radius: 12px;
@@ -514,26 +524,32 @@ section::after {
     height: auto;
     border-radius: 12px;
     position: relative;
-    z-index: 1; /* au-dessus du halo */
+    z-index: 1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Effet au survol */
 .image-wrapper:hover img {
     transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(255, 244, 204, 0.4);
+    box-shadow: 0 15px 30px rgba(255, 244, 204, 0.35);
 }
 
 .image-wrapper:hover::before {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Légende */
 .gallery-caption {
     margin-top: 10px;
     font-size: 1rem;
     color: var(--primary-color);
     font-weight: 500;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .mosaic-gallery .gallery-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 
 /* ================= CONTACT ================= */
