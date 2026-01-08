@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="header">
     <div class="header-container">
 
@@ -179,13 +180,24 @@
         </div>
    
 <!-- ================= JS HAMBURGER ================= -->
+
 <script>
+document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
+    // Toggle menu
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+
+    // Fermer le menu lorsqu'on clique sur un lien
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+});
 </script>
 
 </body>

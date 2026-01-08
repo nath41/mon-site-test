@@ -125,7 +125,6 @@ img {
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
-    margin-left: 15px;
 }
 
 .hamburger span {
@@ -484,12 +483,8 @@ h1.titre-section {
         display: flex;
     }
 
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
+    .nav-links li a {
+        font-size: 1.2rem;
     }
 
  /* ================= Paragraphes responsive ================= */
