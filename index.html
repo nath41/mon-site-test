@@ -24,8 +24,8 @@
                 <li><a href="#" class="active">Accueil</a></li>
                 <li><a href="#Société">Société</a></li>
                 <li><a href="#Services">Services</a></li>
-                <li><a href="#">Applications</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#Applications">Applications</a></li>
+                <li><a href="#Contact">Contact</a></li>
             </ul>
 
             <!-- HAMBURGER -->
@@ -45,15 +45,16 @@
     <div class="container-large"></div>
 
         <div class="hero-text">
-            <h1>UNDERWATER-X</h1>
-            <h2>Technology at Sea</h2>
-        </div>
+        <h1 data-text="UNDERWATER-X">UNDERWATER-X</h1>
+        <div class="h1-reflet">UNDERWATER-X</div> <!-- reflet séparé -->
+        <h2>Technology at Sea</h2>
+    </div>
 
         <div class="hero-image-wrapper">
             <img src="image_accueil.png" alt="Illustration sous-marine"> 
         </div>
     </div>
-</section>
+    </section>
 
 <!-- ================= SOCIETE ================= -->
 
@@ -103,14 +104,13 @@
             <h1 class="titre-section">Nos services</h1>
         </div>
 
-        <p class="paragraphe-centre">
-            <text-align : left;>Elle couvre tout le spectre des engins de petit et moyen tonnage avec une orientation duale tant civile que de défense.
-            </text-align>
+        <p class="paragraphe-exergue">
+        Ils recouvrent tout le spectre des engins de petit et moyen tonnage avec une orientation duale tant civile que de défense.
         </p>
         <br>
         <div class="bloc-texte">
 
-            <h2 class="titre-gauche">Drones sous-marins et de surface</h2>
+            <h2 class="titre-gauche h2-reflet-cristal-ultime">Drones sous-marins et de surface</h2>
                 <br>
                 <p class="paragraphe-gauche">
                 Les drones THALOS (côtier) et PONTOS (océanique) sont des plateformes polyvalentes, modulaires et évolutives.<br>
@@ -122,7 +122,7 @@
         <br>
         <div class="bloc-texte">
 
-            <h2 class="titre-gauche">Caractéristiques clés</h2>
+            <h2 class="titre-gauche h2-reflet-cristal-ultime">Caractéristiques clés</h2>
                 <ul class="liste-gauche">
                     <li>Prolongée avec mode glider pour les longues missions</li>
                     <li>Hybrique à faible signature acoustique, magnétique et thermique</li> 
@@ -134,7 +134,7 @@
         <br>
         <div class="bloc-texte">
 
-            <h2 class="titre-gauche">Architecture logicielle</h2>
+            <h2 class="titre-gauche h2-reflet-cristal-ultime">Architecture logicielle</h2>
                 <br>
                 <p class="paragraphe-gauche">
                 L'intelligence logicielle d'UNDERWATER-X repose sur le framework ISTAR GATE, un système C2/IA (Command & Control/Artificial Intelligence) combinant autonomie décisionnelle et pilotage collaboratif multi-agents.<br>
@@ -144,6 +144,40 @@
     </div>
 </section>
 
+<!-- ================= APPLICATIONS ================= -->
+
+<section class="applications" id="Applications">
+
+    <div class="container-large">
+
+        <div class="applications-content">
+            <h1 class="titre-section">Applications</h1>
+        </div>
+
+        <p class="paragraphe-exergue">
+        Vous trouverez, ci-dessous le détail de nos différentes applications.
+        </p>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="Contact">
+
+    <div class="container-large">
+
+        <div class="contact-content">
+            <h1 class="titre-section">Contactez-nous</h1>
+        </div>
+
+        <div class="slogan-wrapper">
+            <p class="slogan">
+                Une question, un projet ou une collaboration ?<br>
+                Notre équipe se tient à votre disposition :<br>
+                <a href="mailto:contact@underwater-x.com">contact@underwater-x.com</a>
+            </p>
+        </div>
+   
 <!-- ================= JS HAMBURGER ================= -->
 <script>
     const hamburger = document.querySelector('.hamburger');

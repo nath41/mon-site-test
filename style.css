@@ -31,6 +31,10 @@ section {
     max-width: 100%; /* ne dépasse jamais la largeur de la fenêtre */
 }
 
+section:not(.hero) {
+    padding: 60px 0;
+}
+
 /* ================= IMAGES RESPONSIVE ================= */
 img {
     max-width: 100%;
@@ -140,12 +144,44 @@ img {
     padding-bottom: 50px; /* espace sous l'image */
 }
 
-.hero h1 {
+.hero-text {
+    position: relative; /* nécessaire pour le pseudo-élément */
+    text-align: center;
+}
+
+.hero-text h1 {
     font-size: 2.8rem;
     font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 8px;
+    margin: 20px 0 0 0;
     color: #0f89cb;
+
+    /* halo et relief */
+    text-shadow:
+        0 4px 6px rgba(0,0,0,0.25),
+        0 0 12px rgba(15,137,203,0.3);
+}
+
+/* Reflet sous le H1 */
+.hero-text .h1-reflet {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #0f89cb;
+    opacity: 0.25;
+    transform: scaleY(-1) skewX(-3deg); /* miroir + vague légère */
+    filter: blur(2px);
+    margin-top: -0.15em; /* rapproche le reflet du H1 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: wave-close 2s infinite alternate ease-in-out;
+}
+
+/* Ondulation minimale */
+@keyframes wave-close {
+    0%   { transform: scaleY(-1) skewX(-3deg); }
+    50%  { transform: scaleY(-1) skewX(3deg); }
+    100% { transform: scaleY(-1) skewX(-3deg); }
 }
 
 .hero h2 {
@@ -209,7 +245,7 @@ h2.titre-section {
     border: 2px solid #16b7c5; /* couleur du contour */
     border-radius: 12px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* optionnel, plus léger */
-    background: transparent; /* pas de fond */
+    background: #011d48;
 }
 
 .slogan {
@@ -241,47 +277,187 @@ h2.titre-section {
 /* ================= SERVICES ================= */
 
 .services-content {
-    max-width: 1100px;
-    margin: 0;
-    text-align: center;
-}
-
+     max-width: 1100px;
+     margin: 0;
+     text-align: center;
+ }
+ 
 h1.titre-section {
-    color: var(--primary-color);
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 32px;
+     color: var(--primary-color);
+     font-size: 3rem;
+     font-weight: 600;
+     margin-bottom: 32px;
+ }
+ 
+.paragraphe-exergue {
+     font-size: 1.25rem;
+     font-weight: 500;
+     color: #fff4cc;/* jaune doux */
+     background-color: rgba(0, 0, 0, 0.05); /* halo très léger de fond */
+     padding: 1rem 1rem;
+     border-radius: 8px;
+     margin: 0 auto 2rem auto; /* centrage */
+     max-width: 700px; /* largeur compacte */
+     text-align: left;
+     line-height: 1.5; /* Effet flottant / relief + halo lumineux intermédiaire */
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), /* ombre normale */ 0 0 12px rgba(255, 244, 204, 0.28); /* halo lumineux doux mais visible */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+.paragraphe-exergue:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3), /* ombre renforcée */ 0 0 16px rgba(255, 244, 204, 0.33); /* halo lumineux renforcé au hover */
 }
 
-h2.titre-section {
-    color: var(--secondary-color);
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 30px;
+.h2-reflet-cristal-ultime {
+     font-weight: 700;
+     letter-spacing: 0.08em;
+     font-size: 1.65rem; /* Dégradé bleu lumineux avec reflet */
+     background: linear-gradient(180deg, #e0faff 0%, #33cfff 50%, #1ab1ff 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent; /* Relief et lumière */
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35), /* ombre principale */ 0 -2px 2px rgba(255, 255, 255, 0.5), /* reflet supérieur plus visible */ 1px 1px 1px rgba(255, 255, 255, 0.2), /* micro-reflets aléatoires */ -1px 0 1px rgba(255, 255, 255, 0.15); /* reflet latéral subtil */
 }
 
 /* texte d'introduction centré mais texte aligné à gauche */
+
 .texte-intro {
-    width: 100%;
-    margin: 0;
-    text-align: left;
-    color: #fff;
+     width: 100%;
+     margin: 0;
+     text-align: left;
+     color: #fff;
 }
 
 /* Paragraphes centrés mais texte aligné à gauche */
+
 .paragraphe-centre {
-    width: 100%;
-    margin: 0;
-    text-align: left;
-    color: #fff;
+     width: 100%;
+     margin: 0;
+     text-align: left;
+     color: #fff;
+    
+}
+.liste-gauche {
+     margin-top: 1.2rem; /* espace si tu veux l’ajouter */
+     padding-left: 1.2rem; /* retrait des puces */
+     text-align: left;
+     color: #fff;
+     list-style-type: disc;
 }
 
-.liste-gauche {
-    margin-top: 1.2rem;     /* espace si tu veux l’ajouter */
-    padding-left: 1.2rem;   /* retrait des puces */
-    text-align: left;
-    color: #fff;
-    list-style-type: disc;
+/* ================= APPLICATIONS ================= */
+
+.applications-content {
+     max-width: 1100px;
+     margin: 0;
+     text-align: center;
+}
+ 
+h1.titre-section {
+     color: var(--primary-color);
+     font-size: 3rem;
+     font-weight: 600;
+     margin-bottom: 32px;
+}
+ 
+.paragraphe-exergue {
+     font-size: 1.25rem;
+     font-weight: 500;
+     color: #fff4cc;/* jaune doux */
+     background-color: rgba(0, 0, 0, 0.05); /* halo très léger de fond */
+     padding: 1rem 1rem;
+     border-radius: 8px;
+     margin: 0 auto 2rem auto; /* centrage */
+     max-width: 700px; /* largeur compacte */
+     text-align: left;
+     line-height: 1.5; /* Effet flottant / relief + halo lumineux intermédiaire */
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), /* ombre normale */ 0 0 12px rgba(255, 244, 204, 0.28); /* halo lumineux doux mais visible */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+.paragraphe-exergue:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3), /* ombre renforcée */ 0 0 16px rgba(255, 244, 204, 0.33); /* halo lumineux renforcé au hover */
+}
+
+.h2-reflet-cristal-ultime {
+     font-weight: 700;
+     letter-spacing: 0.08em;
+     font-size: 1.65rem; /* Dégradé bleu lumineux avec reflet */
+     background: linear-gradient(180deg, #e0faff 0%, #33cfff 50%, #1ab1ff 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent; /* Relief et lumière */
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35), /* ombre principale */ 0 -2px 2px rgba(255, 255, 255, 0.5), /* reflet supérieur plus visible */ 1px 1px 1px rgba(255, 255, 255, 0.2), /* micro-reflets aléatoires */ -1px 0 1px rgba(255, 255, 255, 0.15); /* reflet latéral subtil */
+}
+
+/* texte d'introduction centré mais texte aligné à gauche */
+
+.texte-intro {
+     width: 100%;
+     margin: 0;
+     text-align: left;
+     color: #fff;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-content {
+     max-width: 1100px;
+     margin: 0;
+     text-align: center;
+}
+ 
+h1.titre-section {
+     color: var(--primary-color);
+     font-size: 3rem;
+     font-weight: 600;
+     margin-bottom: 32px;
+}
+ 
+.slogan-wrapper {
+    max-width: 900px; /* limite la largeur du bloc */
+    margin: 3rem auto 4rem auto;
+    padding: 2.5rem 3rem;
+    border: 2px solid #16b7c5; /* couleur du contour */
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* optionnel, plus léger */
+    background: #011d48; 
+    
+/* CENTRAGE HORIZONTAL ET VERTICAL */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centre verticalement */
+    align-items: center;     /* centre horizontalement */
+    text-align: center;      /* centre le texte multi-lignes */
+}
+
+.slogan {
+    margin: 0;
+    font-size: 1.8rem; /* un peu plus gros */
+    line-height: 1.5;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.slogan span {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #0feafe;
+}
+
+/* Style du lien e-mail */
+.slogan a {
+    color: #16b7c5; /* même bleu que le contour */
+    text-decoration: none; /* supprime le soulignement si besoin */
+}
+
+.slogan a:hover {
+    text-decoration: underline; /* optionnel : soulignement au survol */
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
