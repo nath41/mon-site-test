@@ -279,6 +279,16 @@ h2.titre-section {
     height: auto;
 }
 
+section::after {
+    content: "";
+    display: block;
+    width: 60px;            /* longueur du trait */
+    height: 4px;            /* épaisseur */
+    background: var(--primary-color);
+    margin: 40px auto 0;    /* espace au-dessus et centré */
+    border-radius: 2px;     /* arrondi subtil */
+}
+
 /* ================= SERVICES ================= */
 
 .services-content {
@@ -350,6 +360,16 @@ h1.titre-section {
      list-style-type: disc;
 }
 
+section::after {
+    content: "";
+    display: block;
+    width: 60px;            /* longueur du trait */
+    height: 4px;            /* épaisseur */
+    background: var(--primary-color);
+    margin: 40px auto 0;    /* espace au-dessus et centré */
+    border-radius: 2px;     /* arrondi subtil */
+}
+
 /* ================= APPLICATIONS ================= */
 
 .applications {
@@ -408,6 +428,16 @@ h1.titre-section {
      margin: 0;
      text-align: left;
      color: #fff;
+}
+
+section::after {
+    content: "";
+    display: block;
+    width: 60px;            /* longueur du trait */
+    height: 4px;            /* épaisseur */
+    background: var(--primary-color);
+    margin: 40px auto 0;    /* espace au-dessus et centré */
+    border-radius: 2px;     /* arrondi subtil */
 }
 
 /* ================= CONTACT ================= */
