@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNDERWATER-X</title>
+    <title>Politique de confidentialité - UNDERWATER-X</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Liens visibles sur les pages légales */
+        .legal-content a {
+            color: #0feafe;  /* bleu clair visible sur fond sombre */
+            text-decoration: none;
+        }
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 <header class="header">
@@ -12,11 +22,19 @@
         <div class="logo">
             <a href="index.html"><img src="logoUX.png" alt="UNDERWATER-X"></a>
         </div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="confidentialite.html" class="active">Politique de confidentialité</a></li>
+                <li><a href="mentions_legales.html">Mentions légales</a></li>
+                <li><a href="partenaires.html">Nos partenaires</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
 <main>
-    <section id="Privacy" class="container-large">
+    <section id="Privacy" class="container-large legal-content">
         <h1 class="titre-section">Politique de confidentialité</h1>
 
         <p>
@@ -41,12 +59,37 @@
 
         <h2>Vos droits</h2>
         <p>
-        Vous pouvez demander à tout moment l’accès, la modification ou la suppression de vos données personnelles en contactant : <a href="mailto:contact@underwater-x.com">contact@underwater-x.com</a>.
+        Vous pouvez demander à tout moment l’accès, la modification ou la suppression de vos données personnelles en contactant : 
+        <a href="mailto:contact@underwater-x.com">contact@underwater-x.com</a>.
         </p>
     </section>
 </main>
 
 <footer class="footer">
+    <div class="footer-container">
+
+        <!-- Colonne 1 : Logo -->
+        <div class="footer-column footer-logo">
+            <a href="index.html"><img src="logoUX.png" alt="UNDERWATER-X"></a>
+        </div>
+
+        <!-- Colonne 2 : Liens -->
+        <div class="footer-column footer-links">
+            <ul>
+                <li><a href="confidentialite.html" class="active">Politique de confidentialité</a></li>
+                <li><a href="mentions_legales.html">Mentions légales</a></li>
+                <li><a href="partenaires.html">Nos partenaires</a></li>
+            </ul>
+        </div>
+
+        <!-- Colonne 3 : Contact -->
+        <div class="footer-column footer-contact">
+            <p>Email : <a href="mailto:contact@underwater-x.com">contact@underwater-x.com</a></p>
+            <p>Téléphone : +33 1 64 49 52 75</p>
+        </div>
+
+    </div>
+
     <p class="footer-copy">&copy; 2026 UNDERWATER-X. Tous droits réservés.</p>
 </footer>
 </body>

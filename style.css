@@ -542,6 +542,10 @@ section::after {
     box-shadow: 0 0 12px #0f89cb; /* halo léger */
 }
 
+section.no-separator::after {
+    content: none;
+}
+
 /* ================= CONTACT ================= */
 
 .contact-content {
@@ -762,14 +766,20 @@ h1.titre-section {
     opacity: 0.9;
 }
 
+/* ================= PAGES LÉGALES ================= */
+.legal-content a {
+    color: #0feafe;       /* bleu clair visible */
+    text-decoration: none;
+}
 
+.legal-content a:hover {
+    text-decoration: underline;
+}
 
-
-
-
-
-
-
+.legal-content h1.titre-section,
+.legal-content h2.h2-reflet-cristal-ultime {
+    margin-bottom: 20px;
+}
 
 /* ================= RESPONSIVE ================= */
 
