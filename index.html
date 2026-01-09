@@ -250,26 +250,55 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<!-- ================= JS FLUIDITE DE NAVIGATION ================= -->
+
 <script>
-document.addEventListener('scroll', () => {
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const homeLink = document.querySelector('.nav-links a[href="#"]');
+
+    // Observer pour chaque section
     const sections = document.querySelectorAll('section[id]');
-    const scrollPos = window.scrollY + 100; // +100 pour compenser le header fixed
+    const observerOptions = {
+        root: null,           
+        rootMargin: '0px 0px -50% 0px', // déclenche quand la section est mi-visible
+        threshold: 0
+    };
 
-    sections.forEach(section => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        const id = section.getAttribute('id');
+    const observer = new IntersectionObserver((entries) => {
+        let activeSet = false;
 
-        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-        if (link) {
-            if (scrollPos >= top && scrollPos < top + height) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
+        entries.forEach(entry => {
+            const id = entry.target.id;
+            const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+
+            if (entry.isIntersecting) {
+                navLinks.forEach(l => l.classList.remove('active'));
+                if (link) link.classList.add('active');
+                activeSet = true;
             }
+        });
+
+        // Si aucune section visible, mettre Accueil
+        if (!activeSet && homeLink) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            homeLink.classList.add('active');
         }
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Hamburger
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-links');
+    hamburger?.addEventListener('click', () => navMenu.classList.toggle('active'));
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => navMenu.classList.remove('active'));
     });
 });
+</script>
+
 </script>
 
     </section> <!-- fin de la section Applications -->
