@@ -695,6 +695,82 @@ h1.titre-section {
     }
 }
 
+/* ===============================
+   PAGES SECONDAIRES (légales, partenaires)
+================================ */
+
+.page {
+    padding: 120px 5vw 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.page h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.page h2 {
+    font-size: 1.4rem;
+    margin: 2.5rem 0 1rem;
+    color: #fff4cc;
+}
+
+.page p,
+.page li {
+    line-height: 1.7;
+    color: #dcdcdc;
+}
+
+.page ul {
+    padding-left: 1.2rem;
+}
+
+/* ===============================
+   PARTENAIRES
+================================ */
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+    align-items: center;
+}
+
+.partner-card {
+    text-align: center;
+    text-decoration: none;
+    color: #fff4cc;
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-6px);
+}
+
+.partner-card img {
+    max-width: 160px;
+    max-height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.8rem;
+}
+
+.partner-card span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
