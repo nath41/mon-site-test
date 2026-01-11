@@ -3,62 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions légales | UNDERWATER-X</title>
-
-    <!-- CSS principal du site -->
+    <title>Mentions légales - UNDERWATER-X</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ================= PAGES LÉGALES ================= */
+        .legal-content a {
+            color: #0feafe;       /* bleu clair visible */
+            text-decoration: none;
+        }
+
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+
+        .legal-content h1.titre-section,
+        .legal-content h2.h2-reflet-cristal-ultime {
+            margin-bottom: 20px;
+        }
+
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .legal-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .legal-content .info-block {
+            background-color: rgba(255,255,255,0.05);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
-
 <body>
-
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="logoUX.png" alt="UNDERWATER-X">
-                </a>
-            </div>
-
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="index.html#Société">Société</a></li>
-                    <li><a href="index.html#Services">Services</a></li>
-                    <li><a href="index.html#Applications">Applications</a></li>
-                    <li><a href="index.html#Contact">Contact</a></li>
-                </ul>
-            </nav>
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html"><img src="logoUX.png" alt="UNDERWATER-X"></a>
         </div>
-    </header>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#Société">Société</a></li>
+                <li><a href="index.html#Services">Services</a></li>
+                <li><a href="index.html#Applications">Applications</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- CONTENU -->
-    <section class="legal-page">
-        <div class="container-large">
+<!-- ================= CONTENU ================= -->
+<main>
+    <section class="container-large legal-content">
+        <h1 class="titre-section">Mentions légales</h1>
 
-            <h1 class="titre-section">Mentions légales</h1>
+        <div class="info-block">
+            <h2 class="h2-reflet-cristal-ultime">Éditeur du site</h2>
+            <p>
+                <strong>UNDERWATER-X</strong><br>
+                Société par Actions Simplifiée (SAS)<br>
+                Capital social : 1 500 €<br>
+                Siège social : Nozay (91620), France<br><br>
 
-            <div class="paragraphe-centre">
-                <h2 class="h2-reflet-cristal-ultime">Éditeur du site</h2>
-                <p>
-                    <strong>UNDERWATER-X</strong><br>
-                    Société par Actions Simplifiée (SAS)<br>
-                    Capital social : 1 500 €<br>
-                    Siège social : Nozay (91620), France<br><br>
+                RCS Évry : 990 151 334<br>
+                SIRET : 990 151 334 00010<br>
+                Code NAF : 30.30Z<br><br>
 
-                    RCS Évry : 990 151 334<br>
-                    SIRET : 990 151 334 00010<br>
-                    Code NAF: 30.30Z<br><br>
+                Directeur de la publication : Pierre VIOLANTE<br>
+                Email : <a href="mailto:contact@underwater-x.com">contact@underwater-x.com</a><br>
+                Téléphone : +33 1 64 49 52 75
+            </p>
+        </div>
 
-                    Directeur de la publication : Pierre VIOLANTE<br>
-                    Email : <a href="mailto:contact@underwater-x.com">contact@underwater-x.com</a><br>
-                    Téléphone : +33 1 64 49 52 75
-                </p>
+        <div class="info-block">
+            <h2 class="h2-reflet-cristal-ultime">Hébergement</h2>
+            <p>
+                OVH SAS<br>
+                2 rue Kellermann<br>
+                59100 Roubaix – France<br>
+                Téléphone : 1007<br>
+                Site : <a href="https://www.ovh.com" target="_blank">www.ovh.com</a>
+            </p>
+        </div>
+    </section>
+</main>
 
-                <h2 class="h2-reflet-cristal-ultime">Hébergement</h2>
-                <p>
-                    OVH SAS<br>
-                    2 rue Kellermann<br>
-                    59100 Roubaix – France<br>
-                    Téléphone : 1007<br>
-                    Site : <a href="https://www.ovh.com" target="_blank">www.ovh.com</a>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column footer-logo">
+            <a href="index.html"><img src="logoUX.png" alt="UNDERWATER-X"></a>
+        </div>
+        <div class="footer-column footer-links">
+            <ul>
+                <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+                <li><a href="mentions_legales.html" class="active">Mentions légales</a></li>
+                <li><a href="partenaires.html">Nos partenaires</a></li>
+            </ul>
+        </div>
+        <div class="footer-column footer-contact">
+            <p>Email : <a href="mailto:contact@underwater-x.com">contact@underwater-x.com</a></p>
+            <p>Téléphone : +33 1 64 49 52 75</p>
+        </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 UNDERWATER-X. Tous droits réservés.</p>
+</footer>
+</body>
+</html>

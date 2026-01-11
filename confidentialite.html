@@ -6,17 +6,45 @@
     <title>Politique de confidentialité - UNDERWATER-X</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Liens visibles sur les pages légales */
+        /* ================= PAGES LÉGALES ================= */
         .legal-content a {
-            color: #0feafe;  /* bleu clair visible sur fond sombre */
+            color: #0feafe;       /* bleu clair visible */
             text-decoration: none;
         }
+
         .legal-content a:hover {
             text-decoration: underline;
+        }
+
+        .legal-content h1.titre-section,
+        .legal-content h2.h2-reflet-cristal-ultime {
+            margin-bottom: 20px;
+        }
+
+        /* Contenu lisible et aligné à gauche, mais centré dans le container */
+        .legal-content {
+            max-width: 900px;   /* largeur maximale du texte */
+            margin: 0 auto;     /* centre horizontalement dans la page */
+            text-align: left;   /* texte aligné à gauche pour lecture facile */
+        }
+
+        /* Paragraphes agréables */
+        .legal-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* Sections importantes avec léger fond */
+        .legal-content .info-block {
+            background-color: rgba(255,255,255,0.05); /* léger fond pour détacher */
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
+<!-- ================= HEADER ================= -->
 <header class="header">
     <div class="header-container">
         <div class="logo">
@@ -25,49 +53,61 @@
         <nav class="main-nav">
             <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="confidentialite.html" class="active">Politique de confidentialité</a></li>
-                <li><a href="mentions_legales.html">Mentions légales</a></li>
-                <li><a href="partenaires.html">Nos partenaires</a></li>
+                <li><a href="index.html#Société">Société</a></li>
+                <li><a href="index.html#Services">Services</a></li>
+                <li><a href="index.html#Applications">Applications</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
+<!-- ================= CONTENU ================= -->
 <main>
     <section id="Privacy" class="container-large legal-content">
         <h1 class="titre-section">Politique de confidentialité</h1>
 
-        <p>
-        La société <strong>UNDERWATER-X</strong>, SAS basée à Nozay (91), attache une grande importance à la protection de vos données personnelles.
-        Nous collectons uniquement les informations nécessaires pour la gestion de vos demandes et ne les partageons avec aucun tiers sans votre consentement.
-        </p>
+        <div class="info-block">
+            <p>
+                La société <strong>UNDERWATER-X</strong>, SAS basée à Nozay (91), attache une grande importance à la protection de vos données personnelles.
+                Nous collectons uniquement les informations nécessaires pour la gestion de vos demandes et ne les partageons avec aucun tiers sans votre consentement.
+            </p>
+        </div>
 
-        <h2>Collecte des données</h2>
-        <p>
-        Nous collectons les données que vous nous fournissez directement (email, nom, société, message) lors de vos contacts via le site.
-        </p>
+        <div class="info-block">
+            <h2 class="h2-reflet-cristal-ultime">Collecte des données</h2>
+            <p>
+                Nous collectons les données que vous nous fournissez directement (email, nom, société, message) lors de vos contacts via le site.
+            </p>
+        </div>
 
-        <h2>Utilisation des données</h2>
-        <p>
-        Ces données sont utilisées uniquement pour répondre à vos demandes et pour la communication professionnelle.
-        </p>
+        <div class="info-block">
+            <h2 class="h2-reflet-cristal-ultime">Utilisation des données</h2>
+            <p>
+                Ces données sont utilisées uniquement pour répondre à vos demandes et pour la communication professionnelle.
+            </p>
+        </div>
 
-        <h2>Cookies</h2>
-        <p>
-        Le site n’utilise pas de cookies à des fins commerciales ou publicitaires. Certains cookies techniques peuvent être utilisés pour assurer le bon fonctionnement du site.
-        </p>
+        <div class="info-block">
+            <h2 class="h2-reflet-cristal-ultime">Cookies</h2>
+            <p>
+                Le site n’utilise pas de cookies à des fins commerciales ou publicitaires. Certains cookies techniques peuvent être utilisés pour assurer le bon fonctionnement du site.
+            </p>
+        </div>
 
-        <h2>Vos droits</h2>
-        <p>
-        Vous pouvez demander à tout moment l’accès, la modification ou la suppression de vos données personnelles en contactant : 
-        <a href="mailto:contact@underwater-x.com">contact@underwater-x.com</a>.
-        </p>
+        <div class="info-block">
+            <h2 class="h2-reflet-cristal-ultime">Vos droits</h2>
+            <p>
+                Vous pouvez demander à tout moment l’accès, la modification ou la suppression de vos données personnelles en contactant : 
+                <a href="mailto:contact@underwater-x.com">contact@underwater-x.com</a>.
+            </p>
+        </div>
     </section>
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
     <div class="footer-container">
-
         <!-- Colonne 1 : Logo -->
         <div class="footer-column footer-logo">
             <a href="index.html"><img src="logoUX.png" alt="UNDERWATER-X"></a>
@@ -87,9 +127,7 @@
             <p>Email : <a href="mailto:contact@underwater-x.com">contact@underwater-x.com</a></p>
             <p>Téléphone : +33 1 64 49 52 75</p>
         </div>
-
     </div>
-
     <p class="footer-copy">&copy; 2026 UNDERWATER-X. Tous droits réservés.</p>
 </footer>
 </body>

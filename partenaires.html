@@ -3,80 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNDERWATER-X</title>
+    <title>Nos partenaires - UNDERWATER-X</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .partners-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .partner-item img {
+            height: 80px;
+        }
+
+        .partner-item p {
+            color: #F7DA93;
+            margin-top: 8px;
+        }
+    </style>
 </head>
 <body>
-
-    <header class="header">
+<!-- ================= HEADER ================= -->
+<header class="header">
     <div class="header-container">
         <div class="logo">
             <a href="index.html"><img src="logoUX.png" alt="UNDERWATER-X"></a>
         </div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#Société">Société</a></li>
+                <li><a href="index.html#Services">Services</a></li>
+                <li><a href="index.html#Applications">Applications</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    </header>
+</header>
 
-    <main>
-
-        <section id="Partners" class="container-large">
-            <h1 class="titre-section">Nos partenaires</h1>
-
-            <div class="partners-grid" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
-
-                <div class="partner-item" style="text-align:center;">
-                    <a href="https://banquerichelieufrance.com/" target="_blank">
-                    <img src="logo_brf.png" alt="Banque Richelieu France" style="height:80px;">
-                    </a>
-                    <p style="color:#F7DA93; margin-top:8px;">Banque Richelieu France</p>
-                </div>
-
-                <div class="partner-item" style="text-align:center;">
-                    <a href="https://www.pole-mer-bretagne-atlantique.com/" target="_blank">
-                    <img src="logo_polemer-atlantique.png" alt="logo_polemer-atlantique" style="height:80px;">
-                    </a>
-                    <p style="color:#F7DA93; margin-top:8px;">Pôle Mer Bretagne Atlantique</p>
-                </div>
-
-                <div class="partner-item" style="text-align:center;">
-                    <a href="http://www.ilb-insights.com/" target="_blank">
-                    <img src="logo_ilbinsight.png" alt="logo_ILB INSIGHT" style="height:80px;">
-                    </a>
-                    <p style="color:#F7DA93; margin-top:8px;">ILB INSIGHT</p>
-                </div>
-
-                <div class="partner-item" style="text-align:center;">
-                    <a href="https://reseau-opencampus.com/" target="_blank">
-                    <img src="logo_ocb.png" alt="logo_open campus" style="height:80px;">
-                    </a>
-                    <p style="color:#F7DA93; margin-top:8px;">Open Campus (Anger-Brest-Caen)</p>
-                </div>
-
-                <div class="partner-item" style="text-align:center;">
-                    <a href="https://www.isen.fr/" target="_blank">
-                    <img src="logo_isen.png" alt="logo_isen" style="height:80px;">
-                    </a>
-                    <p style="color:#F7DA93; margin-top:8px;">ISEN - Grandes écoles d'ingénieurs</p>
-                </div>
-
-                <div class="partner-item" style="text-align:center;">
-                    <a href="https://www.bpifrance.fr/" target="_blank">
-                    <img src="logo_bpi.png" alt="logo_bpi" style="height:80px;">
-                    </a>
-                    <p style="color:#F7DA93; margin-top:8px;">BPI France</p>
-                </div>
-
-                <div class="partner-item" style="text-align:center;">
-                    <a href="https://www.caisse-epargne.fr/" target="_blank">
-                    <img src="logo_cepargne.png" alt="logo_caisse d'épargne" style="height:80px;">
-                    </a>
-                    <p style="color:#F7DA93; margin-top:8px;">Caisse d'Epargne</p>
-                </div>
-
-             </div>
+<!-- ================= CONTENU ================= -->
+<main>
+    <section id="Partners" class="container-large partners-content">
+        <h1 class="titre-section">Nos partenaires</h1>
+        <div class="partners-grid">
+            <div class="partner-item">
+                <a href="https://banquerichelieufrance.com/" target="_blank">
+                    <img src="logo_brf.png" alt="Banque Richelieu France">
+                </a>
+                <p>Banque Richelieu France</p>
+            </div>
+            <div class="partner-item">
+                <a href="https://www.pole-mer-bretagne-atlantique.com/" target="_blank">
+                    <img src="logo_polemer-atlantique.png" alt="Pôle Mer Bretagne Atlantique">
+                </a>
+                <p>Pôle Mer Bretagne Atlantique</p>
+            </div>
+            <div class="partner-item">
+                <a href="http://www.ilb-insights.com/" target="_blank">
+                    <img src="logo_ilbinsight.png" alt="ILB INSIGHT">
+                </a>
+                <p>ILB INSIGHT</p>
+            </div>
+            <div class="partner-item">
+                <a href="https://reseau-opencampus.com/" target="_blank">
+                    <img src="logo_ocb.png" alt="Open Campus">
+                </a>
+                <p>Open Campus (Anger-Brest-Caen)</p>
+            </div>
+            <div class="partner-item">
+                <a href="https://www.isen.fr/" target="_blank">
+                    <img src="logo_isen.png" alt="ISEN">
+                </a>
+                <p>ISEN - Grandes écoles d'ingénieurs</p>
+            </div>
+            <div class="partner-item">
+                <a href="https://www.bpifrance.fr/" target="_blank">
+                    <img src="logo_bpi.png" alt="BPI France">
+                </a>
+                <p>BPI France</p>
+            </div>
+            <div class="partner-item">
+                <a href="https://www.caisse-epargne.fr/" target="_blank">
+                    <img src="logo_cepargne.png" alt="Caisse d'Epargne">
+                </a>
+                <p>Caisse d'Epargne</p>
+            </div>
+        </div>
     </section>
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column footer-logo">
+            <a href="index.html"><img src="logoUX.png" alt="UNDERWATER-X"></a>
+        </div>
+        <div class="footer-column footer-links">
+            <ul>
+                <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+                <li><a href="mentions_legales.html">Mentions légales</a></li>
+                <li><a href="partenaires.html" class="active">Nos partenaires</a></li>
+            </ul>
+        </div>
+        <div class="footer-column footer-contact">
+            <p>Email : <a href="mailto:contact@underwater-x.com">contact@underwater-x.com</a></p>
+            <p>Téléphone : +33 1 64 49 52 75</p>
+        </div>
+    </div>
     <p class="footer-copy">&copy; 2026 UNDERWATER-X. Tous droits réservés.</p>
 </footer>
 </body>
